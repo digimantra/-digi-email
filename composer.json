@@ -16,6 +16,6 @@
     "minimum-stability": "stable",
     "prefer-stable": true,
     "require": {
-        "kushagra/testing": "^1.0"
+        
     }
 }
