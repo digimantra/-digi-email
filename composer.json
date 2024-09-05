@@ -13,8 +13,7 @@
             "name": "y"
         }
     ],
-    "minimum-stability": "stable",
-    "require": {
-        "kushagra/testing": "dev-main"
-    }
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {}
 }
