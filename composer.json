@@ -17,5 +17,13 @@
     "prefer-stable": true,
     "require": {
         
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "echo 'The kushagra/testing package has been installed successfully!'"
+        ],
+        "post-update-cmd": [
+            "echo 'The kushagra/testing package has been updated successfully!'"
+        ]
     }
 }
