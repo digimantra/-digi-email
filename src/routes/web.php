@@ -1,5 +1,5 @@
 <?php
 
 Route::get('contact', function(){
-    return 'contact';
+    return 'contact::contact';
 });
