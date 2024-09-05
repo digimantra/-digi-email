@@ -2,7 +2,7 @@
     "name": "kushagra/testing",
     "description": "testing module",
     "type": "library",
-    "license": "n",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Kushagra\\Testing\\": "src/"
