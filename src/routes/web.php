@@ -1,5 +1,5 @@
 <?php
 
 Route::get('contact', function(){
-    return 'contact::contact';
+    return view('kushagra::contact') ;
 });

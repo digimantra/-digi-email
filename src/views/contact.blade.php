@@ -8,5 +8,12 @@
 </head>
 <body>
     <h1>Contact us anytime</h1>
+    <form action="" method="post" class="d-flex flex-column">
+        @csrf
+        <input type="text" name="name" placeholder="Enter Your Name" id="">
+        <input type="text" name="email" placeholder="Enter Your Email" id="">
+        <textarea name="message" placeholder="Your Query" id="" cols="30" rows="10"></textarea>
+        <input type="submit" value="Submit" name="submit">
+    </form>
 </body>
 </html>
