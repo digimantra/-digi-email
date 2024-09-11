@@ -2,7 +2,7 @@
 
 namespace Kushagra\Testing\Http\Controllers;
 use Illuminate\Support\Facades\Request;
-use App\Http\Controllers;
+use App\Http\Controllers\Controller;
 
 class ContactController extends Controller{
     public function index(){
