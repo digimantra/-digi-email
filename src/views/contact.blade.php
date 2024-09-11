@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Contact us anytime</h1>
-    <form action="" method="post" class="d-flex flex-column">
+    <form action="{{route('contact')}}" method="post">
         @csrf
         <input type="text" name="name" placeholder="Enter Your Name" id="">
         <input type="text" name="email" placeholder="Enter Your Email" id="">

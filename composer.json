@@ -25,5 +25,12 @@
         "post-update-cmd": [
             "echo 'The kushagra/testing package has been updated successfully!'"
         ]
+    },
+    "extra": {
+        "laravel":{
+            "providers": [
+                "Kushagra\\Testing\\ContactServiceProvider"
+            ]
+        }
     }
 }

@@ -1,5 +1,8 @@
 <?php
 
-Route::get('contact', function(){
-    return view('kushagra.testing::contact') ;
+use Kushagra\Testing\Http\Controllers\ContactController;
+
+Route::controller(ContactController::class)->group(function(){
+    Route::get('contact', 'contact');
+    Route::post('contact', 'store')->name('contact');
 });
