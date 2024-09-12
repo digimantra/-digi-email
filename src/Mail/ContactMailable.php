@@ -17,7 +17,7 @@ class ContactMailable extends Mailable
     /**
      * Create a new message instance.
      */
-    public function __construct($message)
+    public function __construct($message, $name)
     {
         $this->message = $message;
         $this->name = $name;
@@ -40,7 +40,8 @@ class ContactMailable extends Mailable
     {
         return new Content(
             markdown: 'kushagra.testing::contact.email',
-        )->with(['message'=>$this->message, 'name'=>$this->name]);
+            with:['message'=>$this->message, 'name'=>$this->name]
+        );
     }
 
     /**

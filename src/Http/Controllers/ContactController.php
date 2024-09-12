@@ -20,13 +20,14 @@ class ContactController extends Controller{
                 'message' => 'required',
             ]);
             Mail::to($validated['email'])->send(new ContactMailable($validated['message'], $validated['name']));
-            $user = Contact::create($validated);
-            if($user){
-                return redirect()->back();
-            }
-            else {
-                return back()->withErrors(['error'=>'Failure']);
-            }
+            return back();
+            // $user = Contact::create($validated);
+            // if($user){
+            //     return redirect()->back();
+            // }
+            // else {
+            //     return back()->withErrors(['error'=>'Failure']);
+            // }
         } catch(\Exception $th){
             return $th->getMessage();
         }
