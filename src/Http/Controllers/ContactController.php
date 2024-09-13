@@ -1,26 +1,26 @@
 <?php 
 
 namespace Kushagra\Testing\Http\Controllers;
-use Illuminate\Http\Request;
+// use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Kushagra\Testing\Models\Contact;
+// use Kushagra\Testing\Models\Contact;
 use Kushagra\Testing\Mail\ContactMailable;
 use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller{
-    public function contact(){
-        return view('kushagra.testing::contact');
-    }
 
-    public function store(Request $request){
+    public function store($data){
         try{
-            $validated = $request->validate([
-                'name' => 'required',
-                'email' => 'required|email',
-                'message' => 'required',
-            ]);
-            Mail::to($validated['email'])->send(new ContactMailable($validated['message'], $validated['name']));
-            return back();
+                $validated = $data->validate([
+                    'email' => 'required|email',
+                    'html' => 'required',
+                    'content' => 'required_if:html,true',
+                    'view' => 'required_if:html,false',
+                    'attachment' => 'required',
+                    'subject' => 'required',
+                ]);
+                Mail::to($validated['email'])->send(new ContactMailable($validated['content'], $validated['view'], $validated['subject']));
+                return back();
             // $user = Contact::create($validated);
             // if($user){
             //     return redirect()->back();

@@ -12,15 +12,17 @@ use Illuminate\Queue\SerializesModels;
 class ContactMailable extends Mailable
 {
     use Queueable, SerializesModels;
-    public $message;
-    public $name;
+    public $view;
+    public $content;
+    public $subject;
     /**
      * Create a new message instance.
      */
-    public function __construct($message, $name)
+    public function __construct($view, $content, $subject)
     {
-        $this->message = $message;
-        $this->name = $name;
+        $this->view = $view;
+        $this->content = $content;
+        $this->subject = $subject;
     }
 
     /**
@@ -29,7 +31,7 @@ class ContactMailable extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Contact Mailable',
+            subject: $this->subject,
         );
     }
 
@@ -38,10 +40,15 @@ class ContactMailable extends Mailable
      */
     public function content(): Content
     {
-        return new Content(
-            markdown: 'kushagra.testing::contact.email',
-            with:['message'=>$this->message, 'name'=>$this->name]
-        );
+        if(!empty($this->view)){
+            return new Content(
+                view: $this->view,
+            );
+        } else {
+            return new Content(
+                html: $this->content,
+            );
+        }
     }
 
     /**
