@@ -5,7 +5,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Digimantra\\Digi-email\\": "src/"
+            "Digimantra\\Digiemail\\": "src/"
         }
     },
     "authors": [
@@ -21,16 +21,16 @@
     },
     "scripts": {
         "post-install-cmd": [
-            "echo 'The digimantra/digi-email package has been installed successfully!'"
+            "echo 'The digimantra/digiemail package has been installed successfully!'"
         ],
         "post-update-cmd": [
-            "echo 'The digimantra/digi-email package has been updated successfully!'"
+            "echo 'The digimantra/digiemail package has been updated successfully!'"
         ]
     },
     "extra": {
         "laravel":{
             "providers": [
-                "Digimantra\\Digi-email\\ContactServiceProvider"
+                "Digimantra\\Digiemail\\ContactServiceProvider"
             ]
         }
     }

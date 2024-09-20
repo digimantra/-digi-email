@@ -1,9 +1,9 @@
 <?php
  
-namespace Kushagra\Testing\Http\Controllers;
+namespace Digimantra\Digiemail\Http\Controllers;
 use Illuminate\Support\Facades\Log;
 use App\Http\Controllers\Controller;
-use Kushagra\Testing\Mail\ContactMailable;
+use Digimantra\Digiemail\Mail\ContactMailable;
 use Illuminate\Support\Facades\Mail;
  
 class ContactController extends Controller{

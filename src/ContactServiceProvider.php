@@ -1,6 +1,6 @@
 <?php
 
-namespace Kushagra\Testing;
+namespace Digimantra\Digiemail;
 
 use Illuminate\Support\ServiceProvider;
 

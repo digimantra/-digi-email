@@ -1,6 +1,6 @@
 <?php
 
-namespace Kushagra\Testing\Mail;
+namespace Digimantra\Digiemail\Mail;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
