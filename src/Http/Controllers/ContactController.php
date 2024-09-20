@@ -1,7 +1,6 @@
 <?php
  
 namespace Digimantra\Digiemail\Http\Controllers;
-
 use Illuminate\Support\Facades\Log;
 use App\Http\Controllers\Controller;
 use Digimantra\Digiemail\Jobs\SendContactEmailJob;
