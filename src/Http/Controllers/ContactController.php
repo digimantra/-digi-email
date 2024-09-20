@@ -39,7 +39,7 @@ class ContactController extends Controller{
                 if( !empty($data['files']) ){
                     $files = $data['files'];
                 } else {
-                   $files = '' ;
+                   $files = [] ;
                 }
                 Mail::to($email)->send(new ContactMailable($content, $view, $subject, $files));
                 return 1;
