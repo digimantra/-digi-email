@@ -1,4 +1,4 @@
-# Laravel FCM Notifications Package
+# Laravel Custom Email Sender
 
 ![Packagist Version](https://img.shields.io/packagist/v/digimantra/digi-email)
 ![Packagist Downloads](https://img.shields.io/packagist/dt/digimantra/digi-email)
@@ -74,6 +74,7 @@ $data = [
     'view' => '<path/to/view>',
     'attachment' => false,
 ];
+EmailHelper::sendEmail($data);
 ```
 
 The package will handle the rest.

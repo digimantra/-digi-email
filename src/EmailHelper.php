@@ -1,13 +1,11 @@
 <?php
- 
-namespace Digimantra\Digiemail\Http\Controllers;
-use Illuminate\Support\Facades\Log;
-use App\Http\Controllers\Controller;
-use Digimantra\Digiemail\Jobs\SendContactEmailJob;
 
- 
-class ContactController extends Controller{
- 
+namespace Digiemail\EmailHelper;
+  
+use Illuminate\Support\Facades\Log; 
+use Digimantra\Digiemail\Jobs\SendContactEmailJob; 
+
+class EmailHelper{ 
     public function sendEmail($data){
         try{
                 $err = [];
