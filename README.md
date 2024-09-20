@@ -1,26 +1,35 @@
-Here’s the updated README file content with the additional point about configuring the queue:
+# Laravel FCM Notifications Package
 
-```
-# Custom Email Sender
+![Packagist Version](https://img.shields.io/packagist/v/digimantra/digi-email)
+![Packagist Downloads](https://img.shields.io/packagist/dt/digimantra/digi-email)
+![GitHub License](https://img.shields.io/github/license/digimantra/digi-email?style=flat-square)
 
-## Overview
+## Table of Contents
 
-The **custom-email-sender** package simplifies the process of sending emails via SMTP in your Laravel applications. It allows you to easily send emails by calling a function with a predefined data structure, supporting HTML content and attachments.
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Usage](#usage)
+- [Queueing Emails](#Queueing-Emails)
+- [Composer Requirements](#Composer-Requirements)
+- [License](#license)
+- [Contribution](#contribution)
+- [Support](#support)
 
-## Key Features
+## Requirements
 
-- **Effortless Email Sending:** Quickly send emails by providing essential data such as recipient details, content, and optional attachment flags.
-- **Seamless SMTP Integration:** Utilize your existing SMTP credentials for easy email dispatch.
-- **HTML Email Support:** Send rich, HTML-based emails or use view files for content.
-- **Structured Data for Sending Emails:** Use a straightforward data structure to send emails efficiently.
+- Laravel 8, 9, or 10
+- PHP 8.0 or higher
+- Google API Client (installed automatically via composer)
+- Firebase account with Cloud Messaging API enabled
 
 ## Installation
 
-To install the package, run the following command in your Laravel project:
+**Install via Composer**
 
-```bash
-composer require digimantra/digi-email
-```
+    ```bash
+    composer require digimantra/digi-email
+    ```
 
 ## Configuration
 
@@ -84,6 +93,9 @@ The package relies on `phpmailer/phpmailer` for SMTP handling and is compatible 
 ## License
 
 This package is released under the MIT License. Refer to the LICENSE file for details.
+
+## Contribution
+Feel free to contribute by opening issues or submitting pull requests for new features or bug fixes.
 
 ## Support
 
