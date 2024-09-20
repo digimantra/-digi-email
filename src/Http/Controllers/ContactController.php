@@ -1,24 +1,15 @@
-<?php 
-
+<?php
+ 
 namespace Kushagra\Testing\Http\Controllers;
-// use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use App\Http\Controllers\Controller;
-// use Kushagra\Testing\Models\Contact;
 use Kushagra\Testing\Mail\ContactMailable;
 use Illuminate\Support\Facades\Mail;
-
+ 
 class ContactController extends Controller{
-
+ 
     public function sendEmail($data){
         try{
-                // $validated = $data->validate([
-                //     'email' => 'required|email',
-                //     'html' => 'required',
-                //     'content' => 'required_if:html,true',
-                //     'view' => 'required_if:html,false',
-                //     'attachment' => 'required',
-                //     'subject' => 'required',
-                // ]);
                 $err = [];
                 if( !empty($data['email']) ){
                     $email = $data['email'];
@@ -45,17 +36,16 @@ class ContactController extends Controller{
                 } else {
                    $view = '' ;
                 }
-                Mail::to($email)->send(new ContactMailable($content, $view, $subject));
-                // return back();
-            // $user = Contact::create($validated);
-            // if($user){
-            //     return redirect()->back();
-            // }
-            // else {
-            //     return back()->withErrors(['error'=>'Failure']);
-            // }
+                if( !empty($data['files']) ){
+                    $files = $data['files'];
+                } else {
+                   $files = '' ;
+                }
+                Mail::to($email)->send(new ContactMailable($content, $view, $subject, $files));
+                return 1;
         } catch(\Exception $th){
-            return $th->getMessage();
+            Log::error( $th->getMessage());
+            return 0;
         }
     }
 }

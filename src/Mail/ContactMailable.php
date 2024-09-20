@@ -8,6 +8,7 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Mail\Mailables\Attachment;
 
 class ContactMailable extends Mailable
 {
@@ -15,14 +16,16 @@ class ContactMailable extends Mailable
     public $content;
     public $view;
     public $subject;
+    public $files;
     /**
      * Create a new message instance.
      */
-    public function __construct($content, $view, $subject)
+    public function __construct($content, $view, $subject, $files)
     {
         $this->content = $content;
         $this->view = $view;
         $this->subject = $subject;
+        $this->files = $files;
     }
 
     /**
@@ -59,6 +62,17 @@ class ContactMailable extends Mailable
      */
     public function attachments(): array
     {
-        return [];
+        $attachments = [];
+
+        foreach ($this->files as $file) {
+            $attachments[] = new Attachment(
+                path: $file['path'],      
+                as: $file['name'] ?? null, 
+                mime: $file['mime'] ?? null 
+            );
+        }
+
+        return $attachments;
     }
+
 }
