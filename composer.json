@@ -1,16 +1,17 @@
 {
-    "name": "kushagra/testing",
+    "name": "digimantra/digi-email",
     "description": "testing module",
     "type": "library",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Kushagra\\Testing\\": "src/"
+            "Digimantra\\Digi-email\\": "src/"
         }
     },
     "authors": [
         {
-            "name": "Kushagra Joshi"
+            "name": "Kushagra Joshi",
+            "email": "it@digimantra.com"
         }
     ],
     "minimum-stability": "stable",
@@ -20,16 +21,16 @@
     },
     "scripts": {
         "post-install-cmd": [
-            "echo 'The kushagra/testing package has been installed successfully!'"
+            "echo 'The digimantra/digi-email package has been installed successfully!'"
         ],
         "post-update-cmd": [
-            "echo 'The kushagra/testing package has been updated successfully!'"
+            "echo 'The digimantra/digi-email package has been updated successfully!'"
         ]
     },
     "extra": {
         "laravel":{
             "providers": [
-                "Kushagra\\Testing\\ContactServiceProvider"
+                "Digimantra\\Digi-email\\ContactServiceProvider"
             ]
         }
     }
