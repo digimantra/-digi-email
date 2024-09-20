@@ -26,9 +26,7 @@
 
 **Install via Composer**
 
-    ```bash
     composer require digimantra/digi-email
-    ```
 
 ## Configuration
 
