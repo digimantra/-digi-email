@@ -1,6 +1,6 @@
 {
     "name": "digimantra/digi-email",
-    "description": "testing module",
+    "description": "A laravel package to send email.",
     "type": "library",
     "license": "MIT",
     "autoload": {

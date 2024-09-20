@@ -13,7 +13,6 @@
 - [Queueing Emails](#Queueing-Emails)
 - [Composer Requirements](#Composer-Requirements)
 - [License](#license)
-- [Contribution](#contribution)
 - [Support](#support)
 
 ## Requirements
@@ -83,7 +82,7 @@ The package will handle the rest.
 
 To process queued jobs, execute the following command in your terminal:
 
-```bash
+```
 php artisan queue:work
 ```
 
@@ -95,11 +94,6 @@ The package relies on `phpmailer/phpmailer` for SMTP handling and is compatible 
 
 This package is released under the MIT License. Refer to the LICENSE file for details.
 
-## Contribution
-Feel free to contribute by opening issues or submitting pull requests for new features or bug fixes.
 
 ## Support
-
-For any issues or support inquiries, please open an issue on the GitHub repository:  
-[https://github.com/digimantra/digi-email](https://github.com/digimantra/digi-email)
-```
+    For support or more details you can reach out at it@digimantra.com.
