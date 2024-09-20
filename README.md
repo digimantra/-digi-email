@@ -88,7 +88,5 @@ This package is released under the MIT License. Refer to the LICENSE file for de
 ## Support
 
 For any issues or support inquiries, please open an issue on the GitHub repository:  
-[https://github.com/Kushagra-DML/composer_testing](https://github.com/Kushagra-DML/composer_testing)
+[https://github.com/digimantra/digi-email](https://github.com/digimantra/digi-email)
 ```
-
-Feel free to copy and paste this into your README file!

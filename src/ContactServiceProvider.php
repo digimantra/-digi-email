@@ -6,7 +6,7 @@ use Illuminate\Support\ServiceProvider;
 
 class ContactServiceProvider extends ServiceProvider{
     public function boot(){
-        $this->loadViewsFrom(__DIR__. '/views', 'kushagra.testing');
+        $this->loadViewsFrom(__DIR__. '/views', 'digimantra.digi-email');
         // $this->loadMigrationsFrom(__DIR__.'/database/migrations');
     }
     
